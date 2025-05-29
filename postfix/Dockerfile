@@ -5,7 +5,7 @@ FROM boky/postfix:v4.4.0
 RUN apt-get update && apt-get install -y gettext
 
 # Set entrypoint to the envsubst script (if needed)
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY entrypoint.sh /etc/postfix/entrypoint.sh
+RUN chmod +x /etc/postfix/entrypoint.sh
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/etc/postfix/entrypoint.sh"]
