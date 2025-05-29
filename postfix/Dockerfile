@@ -1,5 +1,5 @@
 # Use Boky's Postfix as the base
-FROM boky/postfix:3.8.3
+FROM boky/postfix:v4.4.0
 
 # Install envsubst (provided by gettext)
 RUN apk add --no-cache gettext
