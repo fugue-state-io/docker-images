@@ -28,5 +28,5 @@ jobs:
     - name: Set up Docker Buildx
       run: |
         TAG=${GITHUB_REF#refs/tags/}
-        docker build . --file ./postfix/Dockerfile --tag registry.digitalocean.com/fugue-state-registry/postfix:$TAG
+        docker build ./postfix/ --file ./postfix/Dockerfile --tag registry.digitalocean.com/fugue-state-registry/postfix:$TAG
         docker push registry.digitalocean.com/fugue-state-registry/postfix:$TAG
