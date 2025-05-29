@@ -8,4 +8,6 @@ RUN apt-get update && apt-get install -y gettext
 COPY entrypoint.sh /etc/postfix/entrypoint.sh
 RUN chmod +x /etc/postfix/entrypoint.sh
 
+HEALTHCHECK NONE
+
 ENTRYPOINT ["/etc/postfix/entrypoint.sh"]
